@@ -1,7 +1,11 @@
 package com.ypeksen.mvc.controller;
 
+import java.security.Principal;
+
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,5 +24,19 @@ public class LoginController {
   		model.addAttribute("error", "Login unsuccessful");
 
     return "login";
+  }
+  
+  @RequestMapping(value = "/unauthorized", method = RequestMethod.GET)
+  public String accessDenied(Model model, Principal principal) {
+
+    if (principal != null) {
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+        String username = loginedUser.getUsername();
+        model.addAttribute("username", username);
+    }
+    
+    
+
+    return "unauthorized";
   }
 }
