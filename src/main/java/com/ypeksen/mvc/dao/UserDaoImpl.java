@@ -22,12 +22,10 @@ public class UserDaoImpl implements UserDao{
 	
 	@Override
 	public User findAuthenticatedUserByEmail(String email) {
-		// TODO Auto-generated method stub
-		Query query = getSession().createQuery("from User where email = :email and authenticated = 1");
+		Query query = getSession().createQuery("select u from USER u where u.email = :email and u.authenticated = 1");
 		query.setParameter("email", email);
 		List<User> userList = query.list();
 		return userList.get(0);
-		
 	}
 
 }
