@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity(name="JOB_LISTING")
+@Entity(name="JobListing")
 @Table(name="JOB_LISTING")
 public class JobListing {
 

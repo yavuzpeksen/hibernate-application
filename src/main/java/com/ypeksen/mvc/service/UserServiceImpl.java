@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ypeksen.mvc.dao.JobDao;
 import com.ypeksen.mvc.model.Job;
 
-@Service
+@Service("userService")
 @Transactional
 public class UserServiceImpl implements UserService{
 
