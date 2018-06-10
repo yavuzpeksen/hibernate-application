@@ -15,7 +15,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-@Entity(name="USER")
+@Entity(name="User")
 @Table(name="USER")
 public class User {
 
