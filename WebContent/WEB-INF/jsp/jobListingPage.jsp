@@ -19,8 +19,8 @@
 <div style="height:40px;"></div>
 <div style="height:40px;">
 	<div style="float:right; height:20px; width:210px; border:1px solid black;">
-		<a href="/homepage" style="width:100px; height:20px; display:inline-block; text-align:center;">Homepage</a>
-		<a href="../accesspoint/logout" style="width:100px; height:20px; display:inline-block; text-align:center;">Logout</a>
+		<a href="${contextPath}/admin/homepage" style="width:100px; height:20px; display:inline-block; text-align:center;">Homepage</a>
+		<a href="${contextPath}/accesspoint/logout" style="width:100px; height:20px; display:inline-block; text-align:center;">Logout</a>
 	</div>
 </div>
   <h2>Job List</h2>
