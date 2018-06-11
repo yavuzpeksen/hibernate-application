@@ -27,6 +27,19 @@ public class JobDaoImpl implements JobDao{
 		List<Job> jobList = query.list();
 		return jobList;
 	}
+	
+	@Override
+	public List<Job> getJobByJobListingId(Long id) {
+		Query query = getSession().createQuery("select j from Job j WHERE j.jobListing.id = :id");
+		query.setParameter("id", id);
+		return (List<Job>) query.list();
+	}
+
+	@Override
+	public void save(Job currentJob) {
+		getSession().save(currentJob);		
+	}
+
 
 	
 }

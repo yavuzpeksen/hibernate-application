@@ -5,6 +5,7 @@ import java.security.Principal;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value="/accesspoint")
 public class LoginController {
+
 
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public String loginGetPage(Model model, String error, String logout, HttpServletRequest request) {
@@ -51,4 +53,12 @@ public class LoginController {
       }
       return "logoutSuccessfulPage";
   }
+  
+  @RequestMapping(value = "/register", method = RequestMethod.GET)
+  public String getRegisterPage(Model model, HttpServletRequest request) {
+
+  	model.addAttribute("userForm",  new com.ypeksen.mvc.model.User());
+    return "register";
+  }
+  
 }

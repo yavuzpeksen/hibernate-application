@@ -31,7 +31,7 @@
 							<tbody>
 							    
 							        			
-				    		<form action="admin/getJobListing" method="POST">
+				    		<form action="getJobListing" method="POST">
 								<input type="hidden" name="id" value="<c:out value="${jobListingId}"/>" /> 
 								<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />

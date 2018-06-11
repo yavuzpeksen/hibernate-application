@@ -1,6 +1,7 @@
 package com.ypeksen.mvc.dao;
 
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -28,5 +29,4 @@ public class JobListingDaoImpl implements JobListingDao {
 		List<JobListing> jobList = query.list();
 		return jobList.get(0);
 	}
-
 }

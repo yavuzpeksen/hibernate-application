@@ -28,4 +28,17 @@ public class UserDaoImpl implements UserDao{
 		return userList.get(0);
 	}
 
+	@Override
+	public User findByEmail(String email) {
+		Query query = getSession().createQuery("select u from User u where u.email = :email");
+		query.setParameter("email", email);
+		List<User> userList = query.list();
+		return userList.get(0);
+	}
+
+	@Override
+	public void save(User user) {
+		getSession().save(user);
+	}
+
 }
