@@ -45,4 +45,11 @@ public class HRServiceImpl extends UserServiceImpl implements HRService {
 		jobDao.save(currentJob);
 		
 	}
+	
+	@Override
+	public void deleteJob(int postId) {
+		
+		jobDao.delete(Long.valueOf(postId));		
+		
+	}
 }

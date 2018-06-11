@@ -13,5 +13,7 @@ public interface HRService extends UserService {
 	public List<Job> getJobByJobListingId(Long id);
 	
 	public void createJobPost(int id, String title, String description, int numOfPerson, Date lastDate);
+	
+	public void deleteJob(int postId);
 
 }

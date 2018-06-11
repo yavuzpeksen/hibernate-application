@@ -84,4 +84,14 @@ public class HRController {
           
     return result;
   }
+  
+  @RequestMapping(value = "/deleteJobPost", method = RequestMethod.POST)
+  @ResponseBody
+  public String deleteJobPost(Model model, Principal principal, @RequestParam("postid") int postId) {
+       
+    String result = "{\"status\":1}";
+    hrService.deleteJob(postId);
+  	
+    return result;
+  }
 }

@@ -40,6 +40,12 @@ public class JobDaoImpl implements JobDao{
 		getSession().save(currentJob);		
 	}
 
+	@Override
+	public void delete(Long postId) {
+		Job job = getSession().load(Job.class, postId);
+		getSession().delete(job);		
+	}
+
 
 	
 }

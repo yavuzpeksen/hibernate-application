@@ -110,7 +110,7 @@ $(document).ready(function(){
 			}
 			$.ajax({
 			    type: "POST",
-			    url: "/admin/deleteJobPost",
+			    url: "${contextPath}/admin/deleteJobPost",
 			    data: data,
 			    dataType: "json",
 			    success: function(data) {
