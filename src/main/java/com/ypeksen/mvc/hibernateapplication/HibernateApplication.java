@@ -31,6 +31,5 @@ public class HibernateApplication implements WebMvcConfigurer{
 		//registry.addResourceHandler("/css/**").addResourceLocations("/css/");
 		registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/static/")
     .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
-
 	}
 }
